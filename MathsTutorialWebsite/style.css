@@ -1,0 +1,92 @@
+#container{
+    width: 1050px;
+    margin: 0 auto;
+    border: 1px grey solid;
+}
+ 
+#header{
+    height: 100px;
+    padding: 10px 0;
+}
+
+#brand{
+    float: left;
+}
+
+h1 a{
+    text-decoration: none;
+    font-size: 50px;
+    font-weight: 100;
+    color: purple;
+}
+
+#searchbox{
+    float: right;
+    background: linear-gradient(#98eb34,#aced5c);
+    width: 400px;
+    height: 50px;
+    padding: 20px 20px 0 20px;
+    margin-top: 20px;
+}
+
+.text{
+    float: left;
+    padding: 5px;
+    font-size: 15px;
+    color: #de7e10;
+    width: 200px;
+    background: white url(images/search.png) right center no-repeat;
+}
+
+.submit{
+    float: right;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px;
+    background: purple;
+    color: white;
+}
+
+.clear{
+    clear: both;
+}
+
+#menu{
+    height: 70px;
+    background: linear-gradient(rgb(252, 252, 81),rgb(236, 236, 19));
+    padding: 7px 0;
+}
+
+ul{
+    list-style: none;
+}
+
+#menu ul li{
+    float: left;
+    padding: 0 30px;
+    height: 30px;
+    border-right: 1px solid rgb(202, 32, 202);
+}
+
+#menu ul li:last-child{
+    border-right: none;
+}
+
+#menu ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 17px;
+    color: rgb(202, 32, 202);
+    line-height: 30px;
+    transition: font-size 0.3s ease;
+    -webkit-transition: font-size 0.3s ease;
+    -o-transition: font-size 0.3s ease;
+    -moz-transition: font-size 0.3s ease;
+    -ms-transition: font-size 0.3s ease;
+}
+
+#menu ul li a:hover, #menu ul li a.active{
+    font-size: 20px;
+    font-weight: bold;
+    color: purple;
+}
