@@ -1,19 +1,34 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
     font: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 #container{
-    width: 1050px;
+    width: 90%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
- 
+
+.clear{
+    clear: both;
+}
+
+/* 1. Header */
 #header{
-    height: 100px;
     padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #brand{
-    float: left;
+    flex: 50%;
 }
 
 h1 a{
@@ -24,15 +39,16 @@ h1 a{
 }
 
 #searchbox{
-    float: right;
+    flex: 50%;
     background: linear-gradient(#98eb34,#aced5c);
     background: -webkit-linear-gradient(#98eb34,#aced5c);
     background: -o-linear-gradient(#98eb34,#aced5c);
     background: -moz-linear-gradient(#98eb34,#aced5c);
-    width: 400px;
-    height: 50px;
-    padding: 20px 20px 0 20px;
-    margin-top: 20px;
+    min-width: 400px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .text{
@@ -54,35 +70,22 @@ h1 a{
     color: white;
 }
 
-.clear{
-    clear: both;
-}
-
+/* 2.Menu */
 #menu{
-    height: 70px;
     background: linear-gradient(rgb(252, 252, 81),rgb(236, 236, 19));
     background: -webkit-linear-gradient(rgb(252, 252, 81),rgb(236, 236, 19));
     background: -o-linear-gradient(rgb(252, 252, 81),rgb(236, 236, 19));
     background: -moz-linear-gradient(rgb(252, 252, 81),rgb(236, 236, 19));
-    padding: 7px 0;
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+
 }
 
-ul{
-    list-style: none;
-}
-
-#menu ul li{
-    float: left;
+#menu a{
     padding: 0 30px;
     height: 30px;
     border-right: 1px solid rgb(202, 32, 202);
-}
-
-#menu ul li:last-child{
-    border-right: none;
-}
-
-#menu ul li a{
     text-decoration: none;
     text-transform: uppercase;
     font-size: 17px;
@@ -95,12 +98,28 @@ ul{
     -ms-transition: font-size 0.3s ease;
 }
 
-#menu ul li a:hover, #menu ul li a.active{
+#menu a:last-child{
+    border-right: none;
+}
+
+#menu a:hover, #menu a.active{
     font-size: 20px;
     font-weight: bold;
     color: purple;
 }
 
+@media screen and (max-width: 700px){
+    #menu{
+        flex-direction: column;
+        align-content: center;
+    }
+
+    #menu a{
+        border-right: none;
+    }
+}
+
+/* 3. Introduction */
 #introduction{
     background: linear-gradient(#aced5c,#98eb34);
     background: -webkit-linear-gradient(#aced5c,#98eb34);
@@ -122,10 +141,21 @@ ul{
     text-align: justify;
 } 
 
+/* 4.Sidebars */
+.sidebars{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sidebarWrapper{
+    flex: 50%;
+    padding: 5px;
+}
+
 .sidebar{
     border: 1px solid rgb(69, 233, 69);
-    width: 450px;
-    height: 500px;
+    width: 100%;
+    height: 100%;
     border-radius: 20px;
     padding: 10px 30px;
 }
@@ -167,20 +197,13 @@ ul{
     -ms-transition: font-size 0.3s ease;
 }
 
-#leftsidebar{
-    float: left;
-}
-
-#rightsidebar{
-    float: right;
-}
-
+/* 5.Footer */
 .footer{
     height: 60px;
     background: linear-gradient(#F6F390,#D5D533);
     background: -webkit-linear-gradient(#F6F390,#D5D533);
     background: -o-linear-gradient(#F6F390,#D5D533);
     background: -moz-linear-gradient(#F6F390,#D5D533);
-    padding: 20px;
-    margin-top: 15px;
+    padding: 10px;
+    margin-top: auto;
 }
