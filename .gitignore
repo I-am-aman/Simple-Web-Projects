@@ -1,2 +1,6 @@
 .git/
 .vscode/
+Sass/.vscode/
+Sass/node_modules/
+Sass/package.json
+Sass/package-lock.json
