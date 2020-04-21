@@ -1,0 +1,17 @@
+@import "base/base";
+@import "utils/variables";
+@import "components/navigation";
+@import "components/buttons";
+
+article{
+    div{
+        h3{
+            color: purple;
+            font-size: 28px;
+        }
+        p{
+            color: $color2;
+            font-size: 20px;
+        }
+    }
+}

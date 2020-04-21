@@ -1,0 +1,30 @@
+%btn-common{
+    font-size: 20px;
+    color: white;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.btn-default{
+    @extend %btn-common;
+    background-color: grey;
+}
+
+.btn-success{
+    @extend %btn-common;
+    background-color: green;
+}
+
+.btn-warning{
+    @extend %btn-common;
+    background-color: orange;
+}
+
+.btn-error{
+    @extend %btn-common;
+    background-color: red;
+}
