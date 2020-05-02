@@ -1,5 +1,6 @@
 body{
     font-family: 'Vollkorn', sans-serif;
+    position: relative;
 }
 
 video#bgVideo{
@@ -7,6 +8,16 @@ video#bgVideo{
     min-width: 100%;
     min-height: 100%;
     z-index: -100;
+}
+
+@media (max-device-width: 768px){
+    body{
+        background: url(https://images.pexels.com/photos/1452701/pexels-photo-1452701.jpeg?auto=compress&cs=tinysrgb&h=650&w=940) center center fixed;
+        background-size: cover;
+    }
+    #bgVideo{
+        display: none;
+    }
 }
 
 #home{
@@ -25,7 +36,7 @@ video#bgVideo{
 }
 
 #home .btn{
-    background-color: rgb(29, 167, 170);
+    background-color: rgb(29, 167, 179);
     color: white;
     font-size: 20px;
     padding: 8px 20px;
@@ -78,6 +89,35 @@ video#bgVideo{
     left: auto;
     right: auto;
     height: 200px;
+}
+
+@media (max-width: 768px){
+    .carousel-inner .item img{
+        height: 360px;
+    } 
+    .carousel-inner h2{
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 400px){
+    .carousel-inner .item img{
+        height: 200px;
+    } 
+    .carousel-inner h2{
+        font-size: 17px;
+    }
+    .navbar-brand{
+        font-size: 12px;
+    }
+}
+
+.footer{
+    background-color: rgba(29, 167, 179, 0.1);
+    color: white;
+    padding: 10px 0;
+    margin-top: 150px;
+    font-size: 15px;
 }
 
 .navbar-custom {
